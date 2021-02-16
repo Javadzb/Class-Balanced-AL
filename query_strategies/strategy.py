@@ -224,8 +224,8 @@ class Strategy(object):
         else:
             for epoch in range(1, n_epoch+1):
                 sys.stdout.write('Epoch %3d' % epoch)
-                #self._train(loader_tr, optimizer)
-                self._train_weighted_loss(loader_tr,optimizer)
+                self._train(loader_tr, optimizer)
+                #self._train_weighted_loss(loader_tr,optimizer)
                 #self._train_ent_loss(loader_tr, optimizer)
                 scheduler.step(epoch)
                 for pg in optimizer.param_groups:
