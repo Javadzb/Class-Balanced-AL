@@ -1,10 +1,10 @@
 import numpy as np
 from dataset import get_dataset, get_handler
-from model import get_net
+#from model import get_net
 from torchvision import transforms
 import torch
 import pdb
-import vgg
+#import vgg
 import sys
 import os
 import argparse

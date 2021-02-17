@@ -7,7 +7,7 @@ import sys
 from torch.optim.lr_scheduler import MultiStepLR
 import pdb
 import os
-from model import get_net
+#from model import get_net
 import pickle
 import torchvision.models as models
 import torch.nn as nn
