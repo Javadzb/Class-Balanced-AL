@@ -1,36 +1,39 @@
-# Project Title
-
-Simple overview of use/purpose.
+# Class-Balanced Active Learning for Image Classification
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+This repository contains code for the paper Class-Balanced Active Learning for Image Classification.
+
+Bibtex:
+
+### Dependencies
+Install Anaconda environment:
+https://docs.anaconda.com/anaconda/install/linux/
+
+Install PyTorch :
+```
+conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
+```
+Install CVXPY python package:
+Installation: https://www.cvxpy.org/install/
+
+Install Gurobi optimizer and its licenese: 
+Installation: https://www.gurobi.com/gurobi-and-anaconda-for-linux/
+
 
 ## Getting Started
 
-### Dependencies
-
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
+Before starting AL cycles, execute run_cycl_0.py on cifar10/cifar100 dataset to obtain the imbalance dataset (only once) and train the model on initial sampels:
+```
+CUDA_VISIBLE_DEVICES=0 python run_cycle_0.py --method RandomSampling --dataset cifar100
+```
 ### Executing program
-
-* How to run the program
-* Step-by-step bullets
+To run Active Learning cycles:
 ```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
+python run.py with the following arguments:
+--imb_type (To specify the imbalance type of the dataset)
+--imb_factor (To specify the imbalance factor)
+--dataset (To specify the dataset)
 ```
 
 ## Authors
@@ -39,24 +42,3 @@ Contributors names and contact info
 
 ex. Dominique Pizzie  
 ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
