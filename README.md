@@ -19,10 +19,10 @@ Install PyTorch :
 conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
 ```
 Install CVXPY python package:
-Installation: https://www.cvxpy.org/install/
+https://www.cvxpy.org/install/
 
 Install Gurobi optimizer and its licenese: 
-Installation: https://www.gurobi.com/gurobi-and-anaconda-for-linux/
+https://www.gurobi.com/gurobi-and-anaconda-for-linux/
 
 
 ## Getting Started
