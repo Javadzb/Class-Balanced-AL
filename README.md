@@ -4,6 +4,7 @@
 
 This repository contains code for the paper Class-Balanced Active Learning for Image Classification.
 
+<img src="framework.pdf" alt="Logo" width="80" height="80">
 Bibtex:
 
 ### Dependencies
