@@ -72,7 +72,7 @@ args_pool = {'CIFAR10':
                 'loader_te_args': {'batch_size': 256, 'num_workers': 1}}}
 args = args_pool[DATA_NAME]
 
-s
+
 
 # load dataset
 X_tr, Y_tr, X_te, Y_te = get_dataset(DATA_NAME)
@@ -201,41 +201,9 @@ print('SEED {}'.format(SEED))
 print(type(strategy).__name__)
 
 ## round 0 accuracy
-P = strategy.test(X_te, Y_te)
+strategy.train()
+#Evaluate trained model
+P = strategy.test(X_te,Y_te)
 acc = np.zeros(NUM_ROUND+1)
 acc[0] = 1.0 * (Y_te == P).sum().item() / len(Y_te)
 print('Cycle 0 testing accuracy {}'.format(acc[0]))
-
-for cycle in range(1, NUM_ROUND+1):
-    print('Cycle {}'.format(cycle))
-
-    # query
-    print('query samples ...')
-    q_idxs = strategy.query(NUM_QUERY)
-    idxs_lb[q_idxs] = True
-    print('samples selected so far = ', sum(idxs_lb))
-
-    # update
-    strategy.update(idxs_lb)
-    strategy.cycle = cycle
-
-    ## Writing active set to the disk for every cycle
-    if not os.path.exists(dataset + '_results/' + method):
-        os.mkdir(dataset + '_results/' + method)
-
-    new_active_set.extend(np.arange(n_pool)[q_idxs].tolist())
-    with open(dataset+'_results/' + method + '/active_set_cycle_' + str(cycle) + '.txt', 'w') as f:
-        for item in new_active_set:
-            f.write('{}\n'.format(item))
-
-    # train
-    strategy.train()
-    # test accuracy
-    P = strategy.test(X_te, Y_te)
-    acc[cycle] = 1.0 * (Y_te==P).sum().item() / len(Y_te)
-    print('testing accuracy {}'.format(acc))
-
-# print results
-print('SEED {}'.format(SEED))
-print(type(strategy).__name__)
-print(acc)
