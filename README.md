@@ -6,7 +6,7 @@ This repository contains code for the paper Class-Balanced Active Learning for I
 
 <div align="center">
   
-    <img src="framework.pdf" alt="Logo" width="80" height="80">
+    <img src="framework.png" alt="Logo" width="80" height="80">
 </div>  
 Bibtex:
 
