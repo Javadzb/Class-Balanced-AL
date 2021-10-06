@@ -4,10 +4,8 @@
 
 This repository contains code for the paper Class-Balanced Active Learning for Image Classification.
 
-<div align="center">
-  
-    <img src="framework.png" alt="Logo" width="80" height="80">
-</div>  
+<img src="./framework.png" alt="Logo" width="600" height="350" style="float:right">
+
 Bibtex:
 
 ### Dependencies
@@ -40,9 +38,7 @@ python run.py with the following arguments:
 --dataset (To specify the dataset)
 ```
 
-## Authors
+## Contributors
+Javad Zolfaghari Bengar (djavad.z@gmail.com)
 
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Laura Lopez Fuentes (lopezfuenteslaura@gmail.com )
