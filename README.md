@@ -1,8 +1,10 @@
-# Class-Balanced Active Learning for Image Classification
+# Class-Balanced Active Learning for Image Classification:
 
 ## Description
 
-This repository contains code for the paper Class-Balanced Active Learning for Image Classification.
+This repository contains code for the paper Class-Balanced Active Learning for Image Classification:
+
+http://arxiv.org/abs/2110.04543
 
 <img src="./framework.png" alt="Logo" width="600" height="350" style="float:right">
 
