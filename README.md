@@ -8,7 +8,6 @@ http://arxiv.org/abs/2110.04543
 
 <img src="./framework.png" alt="Logo" width="600" height="350" style="float:right">
 
-Bibtex:
 
 ### Dependencies
 Install Anaconda environment:
